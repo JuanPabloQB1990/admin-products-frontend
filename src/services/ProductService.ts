@@ -19,7 +19,7 @@ export const addProduct = async(data : ProductData) => {
         console.log(result);
         if (result.success) {
             const url = `${import.meta.env.VITE_API_URL}/api/products`
-            const { data } = await axios.post(url, {
+            await axios.post(url, {
                 name: result.output.name,
                 price: result.output.price
             })
@@ -78,15 +78,15 @@ export const updateProduct = async(data : ProductData, id : Product["id"] ) => {
         const NumberSchema = pipe(string(), transform(Number), number());
         // metodo para validar los tipos de datos sean correctos al asignado en DraftProductSchema
         const result = safeParse(ProductSchema, {
+            id,
             name: data.name,
             price: parse(NumberSchema, data.price),
             availability: toBoolean(data.availability.toString())
         })
-        console.log(result);
         
         if (result.success) {
             const url = `${import.meta.env.VITE_API_URL}/api/products/${id}`
-            const { data } = await axios.put(url, {
+            await axios.put(url, {
                 name: result.output.name,
                 price: result.output.price,
                 availability: result.output.availability
@@ -101,3 +101,25 @@ export const updateProduct = async(data : ProductData, id : Product["id"] ) => {
     }
 };
 
+export const deleteProduct = async(id : Product["id"]) => { 
+    
+    try {
+        const url = `${import.meta.env.VITE_API_URL}/api/products/${id}`
+        await axios.delete(url)
+    } catch (error) {
+        console.log(error);
+        
+    }
+}
+
+export const updateProductAvailability = async(id : Product["id"]) => {
+    console.log(id);
+    
+    try {
+        const url = `${import.meta.env.VITE_API_URL}/api/products/${id}`
+        await axios.patch(url)
+    } catch (error) {
+        console.log(error);
+        
+    }
+}
