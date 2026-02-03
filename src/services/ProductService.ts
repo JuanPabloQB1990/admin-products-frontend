@@ -38,14 +38,18 @@ export async function getProducts() {
     try {
         const url = `${import.meta.env.VITE_API_URL}/api/products`
         const { data } = await axios.get(url)
-
+        
+        console.log(data);
         // se validan los tipos de datos que vienen de la api sean correcto a los requeridos en ProductsSchema
         const result = safeParse(ProductsSchema, data.data)
+        console.log(result);
         
         if (result.success) {
             return result.output
         } else {
-            throw new Error("Datos no validos");
+            console.log(result);
+            return data.message
+            //throw new Error("Datos no validos");
         }
     } catch (error) {
         console.log(error);
