@@ -58,7 +58,7 @@ Crear un archivo .env.local en la raíz del proyecto y coloca la url del backend
 VITE_API_URL=http://localhost:5000
 ```
 
-##▶️ Ejecución del Proyecto
+## ▶️ Ejecución del Proyecto
 
 Modo desarrollo
 ```bash
