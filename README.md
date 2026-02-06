@@ -1,5 +1,3 @@
-# React + TypeScript + Vite - APP ADMINISTRADOR DE PRODUCTOS
-
 # 🖥️ Admin Products Frontend
 
 Frontend de una aplicación de administración de productos, construido con **React + Vite + TypeScript**, consumiendo un API REST backend para gestionar productos (CRUD). Este proyecto demuestra habilidades sólidas en desarrollo frontend moderno, consumo de APIs, ruteo dinámico, diseño responsive y buenas prácticas de UI.
