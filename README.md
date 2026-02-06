@@ -51,7 +51,7 @@ Instala dependencias:
 ```bash
 npm install
 ```
-##⚙️ Variables de Entorno
+## ⚙️ Variables de Entorno
 Crear un archivo .env.local en la raíz del proyecto y coloca la url del backend:
 
 ```bash
