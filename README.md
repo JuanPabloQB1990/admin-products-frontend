@@ -1,50 +1,69 @@
-# React + TypeScript + Vite
+# 🖥️ Admin Products Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend de una aplicación de administración de productos, construido con **React + Vite + TypeScript**, consumiendo un API REST backend para gestionar productos (CRUD). Este proyecto demuestra habilidades sólidas en desarrollo frontend moderno, consumo de APIs, ruteo dinámico, diseño responsive y buenas prácticas de UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 ¿Qué es este proyecto?
 
-## Expanding the ESLint configuration
+Este repositorio contiene una **Single Page Application (SPA)** que permite:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Listar productos obtenidos desde un backend API
+- Crear nuevos productos
+- Editar productos existentes
+- Eliminar productos
+- Navegar entre páginas sin recargar la página
 
-- Configure the top-level `parserOptions` property like this:
+La app está diseñada con una **UX intuitiva**, código modular y tecnologías modernas usadas en la industria.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## 🛠️ Tecnologías utilizadas
+
+| Tecnología | Uso |
+|------------|-----|
+| **React** | UI declarativa y componentes |
+| **Vite** | Herramienta de bundling ultrarrápida |
+| **React Router Dom** | Navegación entre vistas |
+| **TypeScript** | Tipado estático y robustez |
+| **Tailwind CSS** | Estilos utilitarios modernos |
+| **Axios** | Comunicación con el backend |
+| **HTML & CSS3** | Estructura y estilos base |
+
+---
+
+## 📦 Instalación
+
+Clonar el repositorio:
+
+```bash
+git clone https://github.com/JuanPabloQB1990/admin-products-frontend.git
+```
+Ingresa a la carpeta raiz:
+
+```bash
+cd admin-products-frontend
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+Instala dependencias:
+```bash
+npm install
 ```
+## ⚙️ Variables de Entorno
+Crear un archivo .env.local en la raíz del proyecto y coloca la url del backend:
+
+```bash
+VITE_API_URL=http://localhost:5000
+```
+
+## ▶️ Ejecución del Proyecto
+
+Modo desarrollo
+```bash
+npm run dev
+```
+
+
+[![app-admin-products.png](https://i.postimg.cc/WpJ5WH0q/app-admin-products.png)](https://postimg.cc/YjMNj8nt)
+
+
