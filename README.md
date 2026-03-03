@@ -12,7 +12,6 @@ Este repositorio contiene una **Single Page Application (SPA)** que permite:
 - Crear nuevos productos
 - Editar productos existentes
 - Eliminar productos
-- Navegar entre páginas sin recargar la página
 
 La app está diseñada con una **UX intuitiva**, código modular y tecnologías modernas usadas en la industria.
 
@@ -63,7 +62,14 @@ Modo desarrollo
 npm run dev
 ```
 
-
+Modo producción
+```bash
+https://admin-products-frontend-orcin.vercel.app
+```
 [![app-admin-products.png](https://i.postimg.cc/WpJ5WH0q/app-admin-products.png)](https://postimg.cc/YjMNj8nt)
+
+
+
+
 
 
