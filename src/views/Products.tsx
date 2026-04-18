@@ -13,7 +13,7 @@ import { Product } from "../types";
 
 export async function loader() {
   const products = await getProducts();
-  return products;
+  return Array.isArray(products) ? products : [];
 }
 
 export async function action({ request }: ActionFunctionArgs) {

@@ -13,14 +13,18 @@ import ErrorMessage from "../components/ErrorMessage";
 import ProductForm from "../components/ProductForm";
 
 export async function loader({ params }: LoaderFunctionArgs) {
-  if (params.id !== undefined) {
-    const product = await getProductById(+params.id);
-    if (!product) {
-      return redirect("/");
-    }
 
-    return product;
+  if (!params.id) {
+    return redirect("/");
   }
+
+  const product = await getProductById(+params.id);
+
+  if (!product) {
+    return redirect("/");
+  }
+
+  return product;
 }
 
 export async function action({ request, params }: ActionFunctionArgs) {
